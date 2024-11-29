@@ -1,0 +1,157 @@
+Aqui está uma documentação passo a passo para o seu amigo aprender a instalar o **MySQL**, o **Git** e como usar o **VS Code** para salvar códigos, monitorar e selecionar branches.
+
+---
+
+# **Documentação: Instalando MySQL e Git, e Usando VS Code para Controle de Versão**
+
+Esta documentação descreve como instalar o **MySQL** e o **Git**, e como usar o **VS Code** para salvar o código no terminal, monitorar branches e selecionar a branch correta.
+
+---
+
+## **Parte 1: Instalando o MySQL**
+
+### Passo 1: Baixar o MySQL
+1. Acesse o site oficial do MySQL: [MySQL Downloads](https://dev.mysql.com/downloads/installer/).
+2. Escolha a versão **Windows (x86, 32-bit), MSI Installer** ou a versão mais compatível com o seu sistema operacional.
+3. Clique em "Download" e, na página seguinte, escolha a opção para baixar o **"MySQL Installer"**.
+
+### Passo 2: Instalando o MySQL
+1. Abra o arquivo do instalador **MySQL Installer**.
+2. Durante o processo de instalação, você verá algumas opções:
+   - Selecione **"Developer Default"** para instalar o MySQL Server e outras ferramentas de desenvolvimento.
+   - O instalador pode pedir para instalar o **Microsoft Visual Studio Tools**. Permita a instalação, se necessário.
+3. Escolha a versão do **MySQL Server** e o tipo de **Autenticação** (recomenda-se usar a opção **"Strong Password Encryption"**).
+4. Defina uma senha para o usuário **root** (admin) e anote-a em um local seguro.
+5. Complete a instalação, deixando as configurações padrão, a menos que precise de algo específico.
+
+### Passo 3: Verificando a Instalação
+1. Após a instalação, abra o **MySQL Command Line Client**.
+2. Digite a senha **root** que você definiu.
+3. Você verá o prompt do MySQL (`mysql>`), confirmando que o MySQL está funcionando corretamente.
+
+---
+
+## **Parte 2: Instalando o Git**
+
+### Passo 1: Baixar o Git
+1. Acesse o site oficial do Git: [Git Downloads](https://git-scm.com/downloads).
+2. Escolha a versão apropriada para o seu sistema operacional (Windows, macOS, ou Linux).
+3. Clique no link para download.
+
+### Passo 2: Instalando o Git
+1. Abra o arquivo do instalador que foi baixado.
+2. Durante a instalação, deixe as opções padrão selecionadas, a menos que tenha uma preferência específica.
+   - Escolha o editor de texto que você prefere (recomenda-se o **VS Code**).
+   - Certifique-se de selecionar a opção para adicionar o **Git ao PATH**, para poder usar o Git diretamente no terminal.
+
+### Passo 3: Verificando a Instalação
+1. Após a instalação, abra o **Git Bash** (ou o terminal, se você configurou o Git no PATH).
+2. Digite o seguinte comando para verificar a versão do Git:
+   ```bash
+   git --version
+   ```
+3. Se a versão do Git aparecer, a instalação foi bem-sucedida.
+
+---
+
+## **Parte 3: Usando Git no VS Code para Monitoramento de Branches**
+
+### Passo 1: Instalando o VS Code
+1. Baixe o **Visual Studio Code**: [VS Code Downloads](https://code.visualstudio.com/download).
+2. Instale o VS Code, seguindo o assistente de instalação.
+
+### Passo 2: Configurando o Git no VS Code
+1. Abra o **VS Code**.
+2. Verifique se o **Git** está integrado ao VS Code:
+   - No menu, clique em **View > Terminal** ou use o atalho **Ctrl+`** para abrir o terminal integrado.
+   - No terminal, digite:
+     ```bash
+     git --version
+     ```
+   - Se o Git for reconhecido, você verá a versão dele no terminal do VS Code.
+
+### Passo 3: Clonando um Repositório no GitHub (Ou criando um novo)
+1. Para começar, você pode clonar um repositório existente do GitHub:
+   - No VS Code, abra o terminal e digite:
+     ```bash
+     git clone https://github.com/usuario/repositorio.git
+     ```
+   - Substitua `usuario/repositorio.git` pelo link do seu repositório.
+2. Se você ainda não tem um repositório, você pode inicializar um novo:
+   - No VS Code, crie uma nova pasta para o seu projeto.
+   - Abra a pasta no VS Code e, no terminal, digite:
+     ```bash
+     git init
+     ```
+   - Isso inicializa um repositório Git vazio na pasta do seu projeto.
+
+### Passo 4: Criando e Monitorando Branches
+1. Para visualizar as branches existentes, use o comando:
+   ```bash
+   git branch
+   ```
+2. Para criar uma nova branch:
+   - No terminal do VS Code, digite:
+     ```bash
+     git checkout -b nome-da-branch
+     ```
+     Substitua `nome-da-branch` pelo nome que você quer dar à sua nova branch.
+3. Para alternar entre branches:
+   - Use o comando:
+     ```bash
+     git checkout nome-da-branch
+     ```
+4. O VS Code também exibe a branch atual na barra de status na parte inferior esquerda da janela, onde você pode clicar para alternar entre branches.
+
+### Passo 5: Salvando Código no Git
+1. Para adicionar as mudanças feitas no código ao seu repositório:
+   - No terminal do VS Code, digite:
+     ```bash
+     git add .
+     ```
+   - Isso adiciona todas as alterações ao "staging area" do Git.
+   
+2. Para fazer um **commit** das mudanças:
+   - Digite:
+     ```bash
+     git commit -m "Mensagem explicativa sobre o commit"
+     ```
+   
+3. Para **subir** suas alterações para o repositório remoto (no GitHub, por exemplo):
+   - Digite:
+     ```bash
+     git push origin nome-da-branch
+     ```
+
+---
+
+## **Parte 4: Monitorando e Selecionando Branches**
+
+### Passo 1: Monitorando Branches no Git
+- No terminal do VS Code, para visualizar as branches locais, digite:
+  ```bash
+  git branch
+  ```
+- Para visualizar as branches remotas (do GitHub, por exemplo), digite:
+  ```bash
+  git branch -r
+  ```
+  
+### Passo 2: Alternando Entre Branches
+1. Se você precisar alternar para uma branch diferente, use:
+   ```bash
+   git checkout nome-da-branch
+   ```
+   
+2. O VS Code sempre mostrará a branch em que você está na parte inferior esquerda da janela.
+
+---
+
+## **Conclusão**
+
+Agora seu amigo sabe como:
+- Instalar o **MySQL** e **Git**.
+- Usar o **Git** no terminal integrado do **VS Code** para monitorar e selecionar branches.
+- Salvar e subir códigos para repositórios Git.
+
+Se seguir todos os passos corretamente, ele estará pronto para começar a gerenciar seu código usando **Git** e trabalhar com banco de dados **MySQL** de forma eficiente.
